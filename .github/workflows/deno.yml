@@ -1,18 +1,17 @@
-name:EchoTest
+Name: Starter Workflow Demo
+
 on:
   push:
-    branches: ["master"]
+    branches: [ $default-branch ]
   pull_request:
-    branches: ["master"]
-
+    branches: [ $default-branch ]
 
 jobs:
-  demo-workflow-job:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: set echoing of commands on and off
+      - uses: actions/checkout@v3
 
-
-steps:
-- name: just echo a message
-  run: |
-    echo Hello there!
+      - name: demo workflow job
+        run: echo This is a demo start workflow
