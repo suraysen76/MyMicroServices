@@ -7,8 +7,10 @@ on:
 
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  demo-workflow-job:
+    steps:
+      - name: set echoing of commands on and off
+
 
 steps:
 - name: just echo a message
