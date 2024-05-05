@@ -1,0 +1,47 @@
+﻿@model List<MicroserviceWeb.Models.CompanyEmployees>
+@{
+    ViewBag.Title = "Company Employees";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>List of Company Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            EmpNo
+        </th>
+        <th>
+            Employee Name
+        </th>
+        <th>
+            Company
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            
+        </tr>
+    }
+
+</table>
