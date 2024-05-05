@@ -9,5 +9,4 @@ jobs:
       - run: echo "Suraysen"
 
       - name: App Settings Variable Substitution
-        uses: microsoft/variable-substitution@v1
         run: echo "Suraysen 22"
