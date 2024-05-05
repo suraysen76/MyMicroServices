@@ -1,17 +1,9 @@
-Name: Starter Workflow Demo
-
-on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
-
-jobs:
-  build:
+name: hello-world
+on: push
+jobs: 
+  hello-world-job:
     runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: demo workflow job
-        run: echo This is a demo start workflow
+    steps: 
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "Suraysen"
